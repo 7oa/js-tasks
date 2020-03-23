@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input fields with history of changes</title>
+  </head>
+  <body>
+    <style>
+      button:disabled {
+        opacity: 0.3;
+      }
+    </style>
+    <form>
+      <div class="js-input-wrapper">
+        <input name="firstname" />
+        <button class="js-button-prev">←</button>
+        <button class="js-button-next">→</button>
+      </div>
+      <div class="js-input-wrapper">
+        <input name="lastname" />
+        <button class="js-button-prev">←</button>
+        <button class="js-button-next">→</button>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

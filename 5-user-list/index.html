@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      td {
+        border: 1px solid #000;
+      }
+      td {
+        padding: 10px;
+      }
+      .form-row {
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Phone</td>
+          <td>Activated</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="js-value">John Doe</td>
+          <td class="js-value">johndoe@gmail.com</td>
+          <td class="js-value">+3 (455) 354-54-89</td>
+          <td class="js-active-value">false</td>
+          <td>
+            <button class="js-button-activate">Activate</button
+            ><button class="js-button-remove">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Add new user</h3>
+    <form>
+      <div class="form-row">
+        <label for="name">Name:</label>
+        <input id="name" for="name" type="text" />
+      </div>
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input id="email" for="email" type="email" />
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone:</label>
+        <input id="phone" for="phone" type="text" />
+      </div>
+      <button>Add user</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+  </head>
+  <body>
+    <style>
+      .generate-pass {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .copy-pass__input {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <div class="generate-pass">
+      <form action="" class="generate-pass__form js-form-generate-pass">
+        <input
+          type="number"
+          class="generate-pass__number js-input-pass-length"
+          value="10"
+          min="4"
+          max="100"
+        />
+        <input type="submit" value="Generate" class="generate-pass__button" />
+      </form>
+    </div>
+    <div class="copy-pass">
+      <input type="text" class="copy-pass__input js-input-for-paste" />
+      <button class="copy-pass__button js-button-copy-to-buffer">
+        Copy to buffer
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

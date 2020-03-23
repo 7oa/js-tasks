@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ul {
+        list-style: none;
+        max-width: 700px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+      a {
+        color: cornflowerblue;
+      }
+      .task-description {
+        padding: 10px;
+        font-size: 14px;
+
+        line-height: 1.3;
+      }
+    </style>
+    <ul>
+      <li>
+        <details>
+          <summary>
+            <a href="1-request-promisification/index.html"
+              >Task1. HTTP request promisification
+            </a>
+          </summary>
+          <div class="task-description">
+            Промифицировать XMLHttpRequest. Сделать два запроса таким образом,
+            чтобы получить ответ одновременно от обоих.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <a href="2-input-history-changes/input.html"
+              >Task2. Input fields with history of changes</a
+            >
+          </summary>
+          <div class="task-description">
+            Дана HTML форма, состоящая из нескольких input полей. Каждый из
+            input полей должен хранить историю своих изменений (`onchange`
+            event) в замыкании. Пользователь должен иметь возможность
+            передвигаться по истории с помощью кнопок "вперед" и "назад". Также
+            необходимо учесть неактивное состояние кнопок навигации по истории,
+            когда невозможно выполнить действие перемещения вперед или назад.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <a href="#">Task3. Retry operation</a>
+          </summary>
+          <div class="task-description">
+            Создать хелпер-функцию `executeFn()`, которая вызывает переданную в
+            аргументах асинхронную функцию `fn()` до тех пор пока она выполнится
+            без ошибок. Максимальное количество попыток вызова ограничено и
+            также передается аргументом в функцию `executeFn()`. В случае если
+            все попытки закончились неудачей, то необходимо пробросить ошибку
+            полученную от вызываемой функции.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <a href="4-password-generator/index.html"
+              >Task4. Password generator
+            </a>
+          </summary>
+          <div class="task-description">
+            Необходимо создать небольшое приложение, которое позволяет
+            пользователю сгенерировать сложный и безопасный пароль. Приложение
+            состоит из формы с одним input полем для ввода значения длины пароля
+            и кнопки "Submit". Сгенерированный пароль должен отображаться в
+            input поле с кнопкой "Copy to buffer" для копирования пароля в буфер
+            обмена.<br />
+            Безопасным пароль считается в том случае, если:<br />
+            - содержит хотя бы один символ в нижнем регистре:
+            [abcdefghijklmnopqrstuvwxyz]<br />
+            - содержит хотя бы один символ в верхнем регистре:
+            [ABCDEFGHIJKLMNOPQRSTUVWXYZ]<br />
+            - содержит хотя бы одну цифру: [0123456789]<br />
+            - содержит хотя бы один специальный символ: [
+            !#$%&()*+,-./:;<=>?@[\]^_{|}~]<br />
+            - является уникальным по отношению к сгенерированным в этой же
+            сессии<br />
+            - содержит не менее 4 символов
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <a href="5-user-list/index.html">Task5. Users list</a>
+          </summary>
+          <div class="task-description">
+            Страница управления пользователями в приложении состоит из таблицы,
+            содержащей список пользователей с информацией о имени, email,
+            телефоне и статусе аккаунта. При клике на ячейку, содержащую
+            текстовые данные, в таблице должен появляться prompt, с помощью
+            которого можно изменить текст выбранной ячейки. Также любого
+            пользователя из списка можно удалить или поменять его статус, то
+            есть активировать или заблокировать аккаунт. Для добавления новых
+            пользователей используется форма под таблицей. Задачу требуется
+            решить с помощью делегирования событий.
+          </div>
+        </details>
+      </li>
+    </ul>
+  </body>
+</html>

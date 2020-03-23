@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP request promisification</title>
+  </head>
+  <body>
+    <style>
+      .post {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+      }
+      .send-request-wrapper {
+        margin-bottom: 20px;
+      }
+      .data {
+        display: flex;
+      }
+      .data__content {
+        width: 50%;
+        padding: 0 20px;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+      }
+      .data__content:first-of-type {
+        border-right: 1px solid lightgray;
+      }
+    </style>
+    <div class="send-request-wrapper">
+      <button class="js-send-request">Send request</button>
+    </div>
+    <div class="data">
+      <div class="data__content js-data1"></div>
+      <div class="data__content js-data2"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
