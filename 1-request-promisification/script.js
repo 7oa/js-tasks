@@ -39,7 +39,14 @@
   };
 
   buttonSendRequest.addEventListener("click", () => {
-    sendRequest("GET", URL1).then(data => insertData(data, wrapperForData1));
-    sendRequest("GET", URL2).then(data => insertData(data, wrapperForData2));
+    const request1 = sendRequest("GET", URL1);
+    const request2 = sendRequest("GET", URL2);
+    Promise.all([request1, request2])
+      .then(data => {
+        data.forEach((items, id) => {
+          insertData(items, document.querySelector(`.js-data${id + 1}`));
+        });
+      })
+      .catch(e => alert(e));
   });
 })();
