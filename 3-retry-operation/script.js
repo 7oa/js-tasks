@@ -8,7 +8,38 @@ function fn() {
 }
 
 function executeFn(fn, maxAttempts) {
-  // your implementation
+  return fn()
+    .then(n => n)
+    .catch(e => {
+      if (!maxAttempts) throw e;
+      else {
+        pushLog(`try: ${maxAttempts}`);
+        return executeFn(fn, maxAttempts - 1);
+      }
+    });
 }
 
-const result = await executeFn(fn, 3);
+async function runFn() {
+  try {
+    const result = await executeFn(fn, 3);
+    pushLog(`result: ${result}`);
+  } catch (e) {
+    pushLog(e);
+  }
+}
+
+function cleanLog() {
+  document.querySelector(".log").innerHTML = "";
+}
+
+function pushLog(log) {
+  const div = document.createElement("div");
+  div.innerText = log;
+  document.querySelector(".log").append(div);
+}
+
+document.querySelector("button").addEventListener("click", e => {
+  e.preventDefault();
+  cleanLog();
+  runFn();
+});
