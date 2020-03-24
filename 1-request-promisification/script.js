@@ -4,8 +4,6 @@
   const URL2 = `https://jsonplaceholder.typicode.com/users/2/posts`;
 
   const buttonSendRequest = document.querySelector(".js-send-request");
-  const wrapperForData1 = document.querySelector(".js-data1");
-  const wrapperForData2 = document.querySelector(".js-data2");
 
   const sendRequest = (method, url) => {
     return new Promise((resolve, reject) => {
