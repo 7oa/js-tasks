@@ -8,6 +8,8 @@
     ".js-button-copy-to-buffer"
   );
 
+  const history = [];
+
   const generateRandom = str => str[Math.floor(Math.random() * str.length)];
 
   const shuffle = arr => {
@@ -42,9 +44,21 @@
     return shuffle(password.substr(0, length).split("")).join("");
   };
 
+  let appendHistory = data => {
+    const div = document.createElement("div");
+    div.innerText = data;
+    document.querySelector(".pass-history").append(div);
+  };
+
   formGeneratePass.addEventListener("submit", function(evt) {
     evt.preventDefault();
-    inputForPaste.value = generatePass(inputPassLength.value);
+    let pass = generatePass(inputPassLength.value);
+    while (history.includes(pass)) {
+      pass = generatePass(inputPassLength.value);
+    }
+    inputForPaste.value = pass;
+    history.push(pass);
+    appendHistory(pass);
   });
 
   buttonCopyToBuffer.addEventListener("click", function(evt) {
