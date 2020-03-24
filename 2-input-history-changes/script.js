@@ -24,7 +24,10 @@
         curPosition--;
         input.value = history[curPosition];
         buttonNext.removeAttribute("disabled");
-      } else buttonPrev.setAttribute("disabled", "disabled");
+      } else {
+        input.value = "";
+        buttonPrev.setAttribute("disabled", "disabled");
+      }
     };
 
     const goNext = () => {
@@ -32,10 +35,12 @@
         curPosition++;
         input.value = history[curPosition];
         buttonPrev.removeAttribute("disabled");
-      } else buttonNext.setAttribute("disabled", "disabled");
+      } else {
+        buttonNext.setAttribute("disabled", "disabled");
+      }
     };
 
-    input.addEventListener("change", evt => {
+    input.addEventListener("input", evt => {
       evt.preventDefault();
       pushToHistory(evt.target.value);
     });
