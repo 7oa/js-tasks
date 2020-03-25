@@ -13,16 +13,16 @@ class InputWithHistory {
     this.bindEvents();
   }
 
-  toggleButtonNext(disabled) {
-    if (disabled) {
+  toggleButtonNext(enabled) {
+    if (enabled) {
       this.buttonNext.removeAttribute("disabled");
     } else {
       this.buttonNext.setAttribute("disabled", "disabled");
     }
   }
 
-  toggleButtonPrev(disabled) {
-    if (disabled) {
+  toggleButtonPrev(enabled) {
+    if (enabled) {
       this.buttonPrev.removeAttribute("disabled");
     } else {
       this.buttonPrev.setAttribute("disabled", "disabled");
