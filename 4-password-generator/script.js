@@ -8,7 +8,7 @@
     ".js-button-copy-to-buffer"
   );
 
-  const history = [];
+  const history = new Map();
 
   const generateRandom = str => str[Math.floor(Math.random() * str.length)];
 
@@ -53,11 +53,11 @@
   formGeneratePass.addEventListener("submit", function(evt) {
     evt.preventDefault();
     let pass = generatePass(inputPassLength.value);
-    while (history.includes(pass)) {
+    while (history.has(pass)) {
       pass = generatePass(inputPassLength.value);
     }
     inputForPaste.value = pass;
-    history.push(pass);
+    history.set(pass);
     appendHistory(pass);
   });
 
