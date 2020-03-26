@@ -51,8 +51,9 @@ class UsersList {
   }
 
   remove(id) {
-    if (this.users.delete(id))
+    if (this.users.delete(id)) {
       this.table.querySelector(`tr[data-id='${id}']`).remove();
+    }
   }
 
   update(id, field, value) {
